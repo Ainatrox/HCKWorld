@@ -33,6 +33,7 @@ body {
     padding: 0 30px;
     background: #171a23;
     border-bottom: 1px solid #292d38;
+    position: relative;
 }
 
 
@@ -103,6 +104,22 @@ body {
     .youtube:hover {
         background: #cc0000;
     }
+
+
+/* =========================
+   AVISO DE DISPONIBILIDAD
+========================= */
+
+.not-available {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #777c87;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
 
 
 /* =========================
@@ -278,62 +295,56 @@ body {
 
 
 /* =========================
-   MÓVIL
+   BOTONES DE APOYO
 ========================= */
 
-@media (max-width: 600px) {
-
-    .navbar {
-        padding: 0 15px;
-    }
-
-    .brand span {
-        font-size: 19px;
-    }
-
-    .brand img {
-        width: 36px;
-        height: 36px;
-    }
-
-    .social-button {
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .scroll-down {
-        bottom: 20px;
-    }
-
-    .about {
-        padding: 80px 20px;
-    }
-
-        .about h2 {
-            font-size: 34px;
-        }
-
-        .about p {
-            font-size: 16px;
-        }
-
-    .support-box {
-        padding: 22px;
-    }
-
-        .support-box h3 {
-            font-size: 21px;
-        }
+.support-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
+
+.support-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 18px;
+    border-radius: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+    .support-button:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+    }
+
+
+/* Medal */
+
+.medal {
+    background: #5865f2;
+}
+
+
+/* YouTube */
+
+.support-button.youtube {
+    background: #ff0000;
+}
+
+
+/* Twitch */
+
+.twitch {
+    background: #9146ff;
+}
+
+
 /* =========================
    ENLACE DE MEDAL
 ========================= */
@@ -349,17 +360,178 @@ body {
         color: #7c84ff;
         text-decoration: underline;
     }
+
+
 /* =========================
-   AVISO DE DISPONIBILIDAD
+   MÓVIL
 ========================= */
 
-.not-available {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #777c87;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    white-space: nowrap;
+@media (max-width: 600px) {
+
+    /* Cabecera */
+
+    .navbar {
+        height: 65px;
+        padding: 0 12px;
+    }
+
+
+    /* Logo */
+
+    .brand {
+        gap: 8px;
+    }
+
+        .brand span {
+            font-size: 18px;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+        }
+
+
+    /* Aviso central */
+
+    .not-available {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Redes sociales */
+
+    .social-buttons {
+        gap: 6px;
+    }
+
+    .social-button {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+        border-radius: 8px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: calc(100vh - 65px);
+        padding: 25px 20px;
+    }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+
+    /* Flecha */
+
+    .scroll-down {
+        bottom: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* Información */
+
+    .about {
+        padding: 80px 20px;
+    }
+
+        .about h2 {
+            font-size: 34px;
+        }
+
+        .about p {
+            font-size: 16px;
+        }
+
+
+    /* Caja de apoyo */
+
+    .support-box {
+        padding: 22px;
+    }
+
+        .support-box h3 {
+            font-size: 21px;
+        }
+
+
+    /* Botones de apoyo */
+
+    .support-buttons {
+        flex-direction: column;
+    }
+
+    .support-button {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   MÓVILES PEQUEÑOS
+========================= */
+
+@media (max-width: 450px) {
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+
+    /* Ocultamos el nombre para dejar espacio */
+
+    .brand span {
+        display: none;
+    }
+
+
+    /* Aviso */
+
+    .not-available {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+
+    /* Redes */
+
+    .social-buttons {
+        gap: 5px;
+    }
+
+    .social-button {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+
+    /* Logo */
+
+    .brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* Hero */
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
 }
