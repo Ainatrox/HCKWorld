@@ -1,0 +1,365 @@
+﻿/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f1117;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: #171a23;
+    border-bottom: 1px solid #292d38;
+}
+
+
+/* Logo + nombre */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+    .brand img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+
+/* =========================
+   BOTONES SOCIALES
+========================= */
+
+.social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+    .social-button:hover {
+        transform: translateY(-2px);
+    }
+
+
+/* Discord */
+
+.discord {
+    background: #5865f2;
+}
+
+    .discord:hover {
+        background: #4752c4;
+    }
+
+
+/* YouTube */
+
+.youtube {
+    background: #ff0000;
+}
+
+    .youtube:hover {
+        background: #cc0000;
+    }
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 30px;
+}
+
+    .hero h1 {
+        font-size: 52px;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        color: #b8bdc9;
+        margin-bottom: 30px;
+    }
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    background: #5865f2;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+    .main-button:hover {
+        background: #4752c4;
+        transform: translateY(-2px);
+    }
+
+
+/* =========================
+   FLECHA HACIA ABAJO
+========================= */
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    animation: arrow-bounce 2s infinite;
+    transition: background 0.2s ease;
+}
+
+    .scroll-down:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+
+/* Animación de la flecha */
+
+@keyframes arrow-bounce {
+
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(8px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(4px);
+    }
+}
+
+
+/* =========================
+   INFORMACIÓN DEL SERVIDOR
+========================= */
+
+.about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 30px;
+    background: #141720;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* Título pequeño */
+
+.section-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #5865f2;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* Título */
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+
+/* Párrafos */
+
+.about p {
+    color: #b8bdc9;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CAJA DE APOYO
+========================= */
+
+.support-box {
+    margin-top: 40px;
+    padding: 30px;
+    background: #1b1f2a;
+    border: 1px solid #292d38;
+    border-radius: 14px;
+}
+
+    .support-box h3 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .support-box p {
+        margin-bottom: 15px;
+    }
+
+        .support-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .brand span {
+        font-size: 19px;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-button {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .scroll-down {
+        bottom: 20px;
+    }
+
+    .about {
+        padding: 80px 20px;
+    }
+
+        .about h2 {
+            font-size: 34px;
+        }
+
+        .about p {
+            font-size: 16px;
+        }
+
+    .support-box {
+        padding: 22px;
+    }
+
+        .support-box h3 {
+            font-size: 21px;
+        }
+}
+/* =========================
+   ENLACE DE MEDAL
+========================= */
+
+.medal-link {
+    color: #5865f2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .medal-link:hover {
+        color: #7c84ff;
+        text-decoration: underline;
+    }
+/* =========================
+   AVISO DE DISPONIBILIDAD
+========================= */
+
+.not-available {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #777c87;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
