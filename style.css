@@ -479,26 +479,159 @@ body {
 
 
 /* =========================
-   MÓVILES PEQUEÑOS
+   MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+    /* =========================
+       CABECERA
+    ========================= */
+
+    .navbar {
+        height: 85px;
+        padding: 0 12px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+        .brand span {
+            font-size: 18px;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+        }
+
+    /* Aviso central */
+
+    .not-available {
+        top: 58px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Redes sociales */
+
+    .social-buttons {
+        gap: 6px;
+    }
+
+    .social-button {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+        border-radius: 8px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: calc(100vh - 85px);
+        padding: 25px 20px;
+    }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+
+    /* =========================
+       FLECHA
+    ========================= */
+
+    .scroll-down {
+        bottom: 45px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       INFORMACIÓN
+    ========================= */
+
+    .about {
+        padding: 80px 20px;
+    }
+
+        .about h2 {
+            font-size: 34px;
+        }
+
+        .about p {
+            font-size: 16px;
+        }
+
+
+    /* =========================
+       CAJA DE APOYO
+    ========================= */
+
+    .support-box {
+        padding: 22px;
+    }
+
+        .support-box h3 {
+            font-size: 21px;
+        }
+
+
+    /* =========================
+       BOTONES DE APOYO
+    ========================= */
+
+    .support-buttons {
+        flex-direction: column;
+    }
+
+    .support-button {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   MÓVILES MUY PEQUEÑOS
 ========================= */
 
 @media (max-width: 450px) {
 
     .navbar {
+        height: 90px;
         padding: 0 10px;
     }
 
-
-    /* Ocultamos el nombre para dejar espacio */
+    /* Ocultar el nombre para dejar espacio */
 
     .brand span {
         display: none;
+    }
+
+    .brand img {
+        width: 34px;
+        height: 34px;
     }
 
 
     /* Aviso */
 
     .not-available {
+        top: 61px;
         font-size: 8px;
         letter-spacing: 0;
     }
@@ -517,21 +650,24 @@ body {
     }
 
 
-    /* Logo */
-
-    .brand img {
-        width: 34px;
-        height: 34px;
-    }
-
-
     /* Hero */
 
-    .hero h1 {
-        font-size: 34px;
+    .hero {
+        min-height: calc(100vh - 90px);
     }
 
-    .hero p {
-        font-size: 16px;
+        .hero h1 {
+            font-size: 34px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+
+    /* Flecha */
+
+    .scroll-down {
+        bottom: 40px;
     }
 }
