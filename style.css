@@ -603,20 +603,133 @@ body {
         width: 100%;
     }
 }
-
-
 /* =========================
-   MÓVILES MUY PEQUEÑOS
+   ADAPTACIÓN PARA MÓVILES
 ========================= */
 
-@media (max-width: 450px) {
+@media screen and (max-width: 600px) {
+
+    /* CABECERA */
 
     .navbar {
         height: 90px;
-        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 55px 35px;
+        padding: 0 12px;
     }
 
-    /* Ocultar el nombre para dejar espacio */
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+        .brand span {
+            font-size: 18px;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+        }
+
+    .social-buttons {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 6px;
+    }
+
+    .social-button {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+    /* TEXTO "TODAVÍA NO DISPONIBLE" */
+
+    .not-available {
+        position: static;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        transform: none;
+        justify-self: center;
+        align-self: center;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: calc(100vh - 90px);
+        padding: 25px 20px;
+    }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+    /* FLECHA */
+
+    .scroll-down {
+        bottom: 45px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    /* INFORMACIÓN */
+
+    .about {
+        padding: 80px 20px;
+    }
+
+        .about h2 {
+            font-size: 34px;
+        }
+
+        .about p {
+            font-size: 16px;
+        }
+
+    /* CAJA DE APOYO */
+
+    .support-box {
+        padding: 22px;
+    }
+
+        .support-box h3 {
+            font-size: 21px;
+        }
+
+    /* BOTONES */
+
+    .support-buttons {
+        flex-direction: column;
+    }
+
+    .support-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* =========================
+   MÓVILES PEQUEÑOS
+========================= */
+
+@media screen and (max-width: 450px) {
+
+    .navbar {
+        height: 90px;
+        grid-template-rows: 55px 35px;
+    }
 
     .brand span {
         display: none;
@@ -627,17 +740,9 @@ body {
         height: 34px;
     }
 
-
-    /* Aviso */
-
     .not-available {
-        top: 61px;
         font-size: 8px;
-        letter-spacing: 0;
     }
-
-
-    /* Redes */
 
     .social-buttons {
         gap: 5px;
@@ -648,9 +753,6 @@ body {
         height: 34px;
         font-size: 16px;
     }
-
-
-    /* Hero */
 
     .hero {
         min-height: calc(100vh - 90px);
@@ -663,9 +765,6 @@ body {
         .hero p {
             font-size: 16px;
         }
-
-
-    /* Flecha */
 
     .scroll-down {
         bottom: 40px;
