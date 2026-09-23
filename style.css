@@ -736,12 +736,12 @@ body {
     }
 
     .brand img {
-        width: 34px;
-        height: 34px;
+        width: 40px;
+        height: 40px;
     }
 
     .not-available {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .social-buttons {
@@ -749,8 +749,8 @@ body {
     }
 
     .social-button {
-        width: 34px;
-        height: 34px;
+        width: 40px;
+        height: 40px;
         font-size: 16px;
     }
 
@@ -767,6 +767,6 @@ body {
         }
 
     .scroll-down {
-        bottom: 40px;
+        bottom: 50px;
     }
 }
