@@ -135,12 +135,56 @@ body {
     position: relative;
     text-align: center;
     padding: 30px;
+    overflow: hidden;
 }
+
+
+    /* =========================
+   IMAGEN DE FONDO
+========================= */
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient( rgba(15, 17, 23, 0.55), rgba(15, 17, 23, 0.55) ), url("assets/servidor.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        z-index: 0;
+    }
+
+
+    /* =========================
+   CONTENIDO DEL HERO
+========================= */
+
+    .hero h1,
+    .hero p,
+    .hero .hero-buttons {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero .scroll-down {
+        z-index: 1;
+    }
+
+
+    /* =========================
+   TÍTULO
+========================= */
 
     .hero h1 {
         font-size: 52px;
         margin-bottom: 15px;
     }
+
+
+    /* =========================
+   DESCRIPCIÓN
+========================= */
 
     .hero p {
         font-size: 20px;
@@ -770,3 +814,22 @@ body {
         bottom: 50px;
     }
 }
+/* =========================
+   LISTA DE CARACTERÍSTICAS
+========================= */
+
+.about ul {
+    margin: 25px 0;
+    padding-left: 25px;
+}
+
+.about li {
+    color: #b8bdc9;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+    .about li strong {
+        color: white;
+    }
